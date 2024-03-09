@@ -1,8 +1,8 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-GENERATE_POINTS_DIST = './data/generatePoints_distance.txt'
-GENERATE_POINTS = './data/generatePoints.txt'
+GENERATE_POINTS_DIST = '../data/generatePoints_distance.txt'
+GENERATE_POINTS = '../data/generatePoints.txt'
 
 r = np.random.RandomState(24)
 o = r.randn(400, 2)
@@ -39,7 +39,7 @@ plt.plot(x, y, 'ok', markersize=1, alpha=0.5)
 plt.xlabel('x')
 plt.ylabel('y')
 plt.title('Generated Points Plot')
-plt.savefig('./images/generatedPoints.png')
+plt.savefig('../images/generatedPoints.png')
 plt.close()
 
 color = {0: 'c', 1: 'r', 2: 'g', 3: 'b', 4: 'm', 5: 'y'}
@@ -52,5 +52,5 @@ plt.legend()
 plt.xlabel('x')
 plt.ylabel('y')
 plt.title('Generated Points with Lable')
-plt.savefig('./images/generatedColoredPoints.png')
+plt.savefig('../images/generatedColoredPoints.png')
 plt.show()
