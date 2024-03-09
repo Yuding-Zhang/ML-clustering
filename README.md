@@ -18,13 +18,13 @@
 
 - 该文件目录下包含三种算法的main函数，用于调用algorithms文件目录下的算法和data_process文件，输出得到分类图片。
 - images目录保存对应算法得到的结果图片
-- ![cluster_cutoff](.\images\DPC\cluster_cutoff.png)
+- ![cluster_cutoff](./images/DPC/cluster_cutoff.png)
 
 ##  visualization文件目录
 
 + 该目录包含三种算法的test文件，用于测试算法以及得到聚类的散点图。
 + ![generatedPoints](./images/generatedPoints.png)
-+ ![generatedColoredPoints](.\images\generatedColoredPoints.png)
++ ![generatedColoredPoints](./images/generatedColoredPoints.png)
 + generate_points.py用于生成2400个随机的散点，数据保存在data中，test文件均对该数据进行操作。
 
 ## Reference
