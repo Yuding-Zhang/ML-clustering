@@ -1,5 +1,5 @@
 import matplotlib.pyplot as plt
-import data_process
+from .. import data_process
 from algorithms.DensityPeakCluster import DensityPeakCluster
 
 GIVEN_DATA = '../data/example_distances.dat'
@@ -32,7 +32,7 @@ def main():
     plt.xlabel('Cluster No.')
     plt.ylabel('Point Number')
     plt.title(r'$d_c=$' + str(threshold))
-    plt.savefig('../images/DPC/cluster_cutoff.png')
+    # plt.savefig('../images/DPC/cluster_cutoff.png')
     plt.show()
 
 
