@@ -9,9 +9,14 @@ import matplotlib.pyplot as plt
 import data_process
 from algorithms.DensityPeakCluster import DensityPeakCluster
 
-# pycharm 路径设置../ vscode 路径设置 ./
-GIVEN_DATA = '../data/example_distances.dat'  # 为了方便可以直接用绝对路径
+# pycharm 路径设置../  ;vscode 路径设置 ./ 为了方便可以直接用绝对路径
+# pycharm use
+GIVEN_DATA = '../data/example_distances.dat'
+# vscode use
+# GIVEN_DATA = 'F:\ML-clustering\data\example_distances.dat'
 
+
+# print(os.getcwd())  # 用来查看当前终端默认目录
 
 def main():
     solution = data_process.ProcessData()
