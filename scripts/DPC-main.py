@@ -9,7 +9,8 @@ import matplotlib.pyplot as plt
 import data_process
 from algorithms.DensityPeakCluster import DensityPeakCluster
 
-GIVEN_DATA = '../data/example_distances.dat'  # pycharm 路径设置../ vscode 路径设置 ./
+# pycharm 路径设置../ vscode 路径设置 ./
+GIVEN_DATA = '../data/example_distances.dat'  # 为了方便可以直接用绝对路径
 
 
 def main():
