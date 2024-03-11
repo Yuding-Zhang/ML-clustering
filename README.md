@@ -1,6 +1,6 @@
 # ML-clustering
 
-用于2024年春人工智能基础课程代码，包含三种聚类算法（KMeans HC DPC)及其可视化。
+用于 2024 年春人工智能基础课程代码，包含三种聚类算法（KMeans HC DPC)及其可视化。建议使用 pycharm
 
 ## Installation
 
@@ -12,22 +12,22 @@
 
 ## Download the dataset
 
-可以根据个人需要下载dat、csv和txt的数据集到data文件目录下，修改相应文件的路径名称和数据处理代码。
+可以根据个人需要下载 dat、csv 和 txt 的数据集到 data 文件目录下，修改相应文件的路径名称和数据处理代码。
 
-层级聚类代码直接调用函数，如果要详细补充可以在test中写
+层级聚类代码直接调用函数，如果要详细补充可以在 test 中写
 
-## scripts文件目录
+## scripts 文件目录
 
-- 该文件目录下包含三种算法的main函数，用于调用algorithms文件目录下的算法和data_process文件，输出得到分类图片。
-- images目录保存对应算法得到的结果图片
+- 该文件目录下包含三种算法的 main 函数，用于调用 algorithms 文件目录下的算法和 data_process 文件，输出得到分类图片。
+- images 目录保存对应算法得到的结果图片
 - ![cluster_cutoff](./images/DPC/cluster_cutoff.png)
 
-##  visualization文件目录
+## visualization 文件目录
 
-+ 该目录包含三种算法的test文件，用于测试算法以及得到聚类的散点图。
-+ ![generatedPoints](./images/generatedPoints.png)
-+ ![generatedColoredPoints](./images/generatedColoredPoints.png)
-+ generate_points.py用于生成2400个随机的散点，数据保存在data中，test文件均对该数据进行操作。
+- 该目录包含三种算法的 test 文件，用于测试算法以及得到聚类的散点图。
+- ![generatedPoints](./images/generatedPoints.png)
+- ![generatedColoredPoints](./images/generatedColoredPoints.png)
+- generate_points.py 用于生成 2400 个随机的散点，数据保存在 data 中，test 文件均对该数据进行操作。
 
 ## Reference
 
@@ -36,4 +36,3 @@
 [jasonwbw/DensityPeakCluster: A cluster framework for 'Clustering by fast search and find of density peaks' in science 2014. (github.com)](https://github.com/jasonwbw/DensityPeakCluster)
 
 [lanbing510/DensityPeakCluster: Python Code For 'Clustering By Fast Search And Find Of Density Peaks' In Science 2014. (github.com)](https://github.com/lanbing510/DensityPeakCluster)
-
