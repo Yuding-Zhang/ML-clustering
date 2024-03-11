@@ -28,11 +28,11 @@ def main():
     # show cluster distribution info
     temp = sorted(taginfo.items(), key=lambda k: k[1])
     y, x = zip(*temp)
-    plt.scatter(x, y, c='black')
+    plt.scatter(x, y, c='black', s=10)
     plt.xlabel('Cluster No.')
     plt.ylabel('Point Number')
     plt.title(r'$d_c=$' + str(threshold))
-    # plt.savefig('../images/DPC/cluster_cutoff.png')
+    plt.savefig('../images/DPC/cluster_cutoff.png')
     plt.show()
 
 
