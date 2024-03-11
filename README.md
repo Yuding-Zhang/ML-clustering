@@ -4,7 +4,7 @@
 
 ## Installation
 
-- Create a conda environment with `python==3.9.12`. Install python packages in `requirements.txt`.
+- Create a conda environment with `python==3.9.18`. Install python packages in `requirements.txt`.
 
 - ```shell
   pip install -r requirements.txt

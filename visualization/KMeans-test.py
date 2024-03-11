@@ -1,3 +1,10 @@
+import os
+import sys
+
+base_path = os.path.dirname(os.path.dirname(
+    os.path.abspath(__file__)))
+sys.path.append(base_path)
+
 import matplotlib.pyplot as plt
 from algorithms.Kmeans import KMeansCluster
 import numpy as np
