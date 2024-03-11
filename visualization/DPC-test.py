@@ -1,5 +1,5 @@
 import matplotlib.pyplot as plt
-from .. import data_process
+import data_process
 from algorithms.DensityPeakCluster import DensityPeakCluster
 
 
