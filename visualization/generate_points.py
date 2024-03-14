@@ -1,22 +1,22 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-GENERATE_POINTS_DIST = '../data/generatePoints_distance.txt'
-GENERATE_POINTS = '../data/generatePoints.txt'
+GENERATE_POINTS_DIST = '../data/generatePoints_distance_PLOT.txt'
+GENERATE_POINTS = '../data/generatePoints_PLOT.txt'
 
 r = np.random.RandomState(24)
-o = r.randn(400, 2)
+o = r.randn(100, 2)
 o[:, 0] += 2
 o[:, 1] += 6
-u = r.randn(400, 2)
+u = r.randn(100, 2)
 u[:, 0] += 4
 u[:, 1] -= 0.5
-v = r.randn(400, 2)
+v = r.randn(100, 2)
 v[:, 0] += 7
 v[:, 1] -= 0.5
-p = r.randn(400, 2)
-q = r.randn(400, 2) + 3
-s = r.randn(400, 2) + 6
+p = r.randn(100, 2)
+q = r.randn(100, 2) + 3
+s = r.randn(100, 2) + 6
 
 t = np.concatenate((o, p, q, s, u, v), axis=0)
 

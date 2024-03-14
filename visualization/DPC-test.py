@@ -9,12 +9,12 @@ import matplotlib.pyplot as plt
 import data_process
 from algorithms.DensityPeakCluster import DensityPeakCluster
 
-TEST_DATA = '../data/generatePoints_distance.txt'
-COOR_DATA = '../data/generatePoints.txt'
+TEST_DATA = '../data/generatePoints_distance_PLOT.txt'
+TEST_PLOT_DATA = '../data/generatePoints_PLOT.txt'
 
 
-def plot_points(center, temp, color, tag):
-    with open(COOR_DATA, 'r', encoding='utf-8') as f:
+def plot_points(center, temp, color, tag, style):
+    with open(TEST_PLOT_DATA, 'r', encoding='utf-8') as f:
         lines = f.readlines()
         coords = dict()
         for line in lines:
@@ -29,11 +29,12 @@ def plot_points(center, temp, color, tag):
         for i in range(len(center)):
             c = coords[p[0]]
             try:
-                # 标号从1开始，故i + 1
-                if p[1] == i + 1 and tag == 2:
-                    plt.scatter(c[0], c[1], c=color[i], alpha=0.6, s=1)
+                # 标号从1开始，故i + 1 熵的值没选好会有-1
+                if tag == 2:
+                    if p[1] == i + 1:
+                        plt.scatter(c[0], c[1], c=color[i+1], marker=style[i+1], alpha=0.6, s=1)
                 else:
-                    plt.scatter(c[0], c[1], c=color[0], alpha=0.6, s=1)
+                    plt.scatter(c[0], c[1], c=color[0], marker=style[0], alpha=0.6, s=1)
             except KeyError:
                 raise 'Key map does not exist!'
 
@@ -41,14 +42,14 @@ def plot_points(center, temp, color, tag):
     plt.ylabel('y')
     plt.title('Plot Result')
     plt.savefig('../images/DPC/generate_data_result_{}.png'.format(tag))
-    plt.show()
+
 
 
 def main():
     solution = data_process.ProcessData()
     dist, maxid = solution.data_process(TEST_DATA)
     # 通用数据使用以下一行求截断距离（耗时较长）
-    # threshold = solution.threshold(dist, maxid)
+    # threshold = solution.threshold(dist, maxid) # 更换数据后这里需要重新计算
     threshold = 0.7828967189629044
     sort_dst = solution.CutOff(dist, maxid, threshold)
     # sort_dst = solution.Guasse(dist, maxid, threshold)
@@ -69,8 +70,9 @@ def main():
     # show cluster distribution info
     temp = sorted(taginfo.items(), key=lambda k: k[1])
     color = {0: 'r', 1: 'b', 2: 'g', 3: 'k', 4: 'c', 5: 'm', 6: 'y'}
-    plot_points(center, temp, color, 1)
-    plot_points(center, temp, color, 2)
+    style = {0: 'o', 1: 'v', 2: '8', 3: 'p', 4: 'd', 5: '*', 6: 's'}
+    # plot_points(center, temp, color, 1, style)
+    plot_points(center, temp, color, 2, style)
 
     # y, x = zip(*temp)
     # plt.scatter(x, y)
